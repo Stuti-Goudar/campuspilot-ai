@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCampus</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SmartCampus</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#navigator">Navigator</a></li>
+            <li><a href="#assistant">Assistant</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#lost-found">Lost & Found</a></li>
+            <li><a href="#maintenance">Maintenance</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>SmartCampus</h1>
+        <h2>Intelligent Digital Campus Ecosystem</h2>
+        <p>
+            A modern platform that helps students easily navigate their campus,
+            view events, report issues, access important services, and interact
+            with a smart campus assistant.
+        </p>
+
+        <div class="search-box">
+            <input type="text" id="campusInput" placeholder="Enter Campus Name (e.g., Jain Institute)">
+            <button onclick="checkCampus()">Explore Campus</button>
+        </div>
+
+        <p id="message"></p>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About SmartCampus</h2>
+        <p>
+            SmartCampus is an intelligent companion designed to improve the
+            student experience by bringing campus information, navigation,
+            events, maintenance reporting, and assistance into one platform.
+        </p>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <h2>Features</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🏫 Campus Navigator</h3>
+                <p>Search your campus and quickly access important information.</p>
+            </div>
+            <div class="card">
+                <h3>🤖 AI Assistant</h3>
+                <p>Ask simple campus-related questions and receive instant responses.</p>
+            </div>
+            <div class="card">
+                <h3>📅 Events</h3>
+                <p>Stay updated with workshops, hackathons, and seminars.</p>
+            </div>
+            <div class="card">
+                <h3>📦 Lost & Found</h3>
+                <p>Report lost or found items easily.</p>
+            </div>
+            <div class="card">
+                <h3>🔧 Maintenance</h3>
+                <p>Report classroom and campus maintenance issues.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Dashboard</h3>
+                <p>Quick overview of campus services and statistics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Navigator -->
+    <section id="navigator">
+        <h2>Campus Navigator</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Current Supported Campus</p>
+        <div class="card main-navigator-card">
+            <h3>Jain Institute of Engineering and Technology, Hubballi</h3>
+            <p>Departments • Library • Cafeteria • Auditorium • Labs • Sports Complex</p>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <section id="assistant">
+        <h2>Campus Assistant</h2>
+        <div class="assistant-box">
+            <input type="text" id="question" placeholder="Ask about library, CSE, canteen, fees...">
+            <button onclick="answerQuestion()">Ask</button>
+        </div>
+        <div id="answer" class="answer-box"></div>
+    </section>
+
+    <!-- Events -->
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>AI Workshop</h3>
+                <p>Learn AI basics with practical demonstrations.</p>
+                <button class="event-btn" onclick="registerEvent('AI Workshop')">Register</button>
+            </div>
+            <div class="card">
+                <h3>Hackathon</h3>
+                <p>24-hour coding competition for students.</p>
+                <button class="event-btn" onclick="registerEvent('Hackathon')">Register</button>
+            </div>
+            <div class="card">
+                <h3>Innovation Expo</h3>
+                <p>Showcase innovative engineering projects.</p>
+                <button class="event-btn" onclick="registerEvent('Innovation Expo')">Register</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lost & Found -->
+    <section id="lost-found">
+        <h2>Lost & Found</h2>
+        <form id="lostFoundForm">
+            <input type="text" id="lostName" placeholder="Your Name" required>
+            <input type="text" id="lostItem" placeholder="Lost Item" required>
+            <textarea id="lostDesc" placeholder="Description" required></textarea>
+            <button type="button" onclick="submitLostFound()">Submit Report</button>
+        </form>
+        <p id="lostMessage" class="form-feedback"></p>
+    </section>
+
+    <!-- Maintenance -->
+    <section id="maintenance">
+        <h2>Maintenance Report</h2>
+        <form id="maintenanceForm">
+            <input type="text" id="maintLocation" placeholder="Location (e.g., Room 204)" required>
+            <textarea id="maintDesc" placeholder="Describe the Issue" required></textarea>
+            <button type="button" onclick="submitMaintenance()">Report Issue</button>
+        </form>
+        <p id="maintMessage" class="form-feedback"></p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>✉️ Email: contact@smartcampus.edu</p>
+        <p>📞 Admissions: +91 98765 43210</p>
+        <p>📞 Admin Office: +91 98765 43211</p>
+        <p>📞 Helpline / Support: +91 98765 43212</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 SmartCampus | Designed for Educational Purpose</p>
+    </footer>
+
+</body>
+</html>
