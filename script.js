@@ -13,7 +13,7 @@ function checkCampus() {
 
     if (
         campus.includes("jain") ||
-        campus.includes("jiet") ||
+        campus.includes("jgi") ||
         campus.includes("jain institute")
     ) {
         message.innerHTML = "✅ Welcome to <b>Jain Institute of Engineering and Technology</b>, Hubballi.";
@@ -47,21 +47,21 @@ function answerQuestion() {
     answer.style.color = "#1f2937";
 
     if (question.includes("library")) {
-        answer.innerHTML = "📚 <b>Library</b><br>📍 Academic Block<br>🕒 Timings: 8:30 AM - 8:00 PM";
+        answer.innerHTML = "📚 <b>Library</b><br>📍 Academic Block<br>🕒 Timings: 8:30 AM - 5:00 PM";
     } else if (question.includes("cse") || question.includes("computer science")) {
         answer.innerHTML = "💻 <b>CSE Department</b><br>📍 Block A - First Floor";
     } else if (question.includes("canteen") || question.includes("cafeteria") || question.includes("food")) {
         answer.innerHTML = "🍴 <b>Cafeteria</b><br>🕒 Timings: 9:00 AM - 5:00 PM";
     } else if (question.includes("principal")) {
-        answer.innerHTML = "🏢 <b>Principal's Office</b><br>📍 First Floor - Administrative Block";
+        answer.innerHTML = "🏢 <b>Principal's Office</b><br>📍 Ground floor Floor - Administrative Block";
     } else if (question.includes("placement")) {
         answer.innerHTML = "🎯 <b>Placement Cell</b><br>📍 Second Floor - Administrative Block<br>🕒 Timings: 9:00 AM - 5:00 PM";
     } else if (question.includes("hostel")) {
-        answer.innerHTML = "🏠 <b>Hostel Office</b><br>📍 Near Main Gate";
+        answer.innerHTML = "🏠 <b>PG Office</b><br>📍 Near Main Gate";
     } else if (question.includes("fee")) {
         answer.innerHTML = "💳 <b>Fee Counter</b><br>📍 Administrative Block<br>🕒 Timings: 9:00 AM - 4:00 PM";
     } else if (question.includes("bus")) {
-        answer.innerHTML = "🚌 <b>College Bus Service</b><br>Buses arrive between 8:00 AM and 8:45 AM.";
+        answer.innerHTML = "🚌 <b>College Bus Service</b><br>Buses arrive between 7:00 AM and 6:00 AM.";
     } else if (question.includes("admission")) {
         answer.innerHTML = "📝 <b>Admission Office</b><br>📍 Ground Floor - Administrative Block";
     } else if (question.includes("contact") || question.includes("phone")) {
