@@ -66,7 +66,7 @@ function answerQuestion() {
         answer.innerHTML = "📝 <b>Admission Office</b><br>📍 Ground Floor - Administrative Block";
     } else if (question.includes("contact") || question.includes("phone")) {
         answer.innerHTML = "☎️ <b>Contact College Office:</b><br>+91 98765 43210";
-    } else if (question.includes("Hello") || question.includes("hi")) {
+    } else if (question.includes("hello") || question.includes("hi")) {
         answer.innerHTML = "👋 Hello!How can I help you with Jain Institute of Technology campus today?";
     } else {
         answer.innerHTML =
