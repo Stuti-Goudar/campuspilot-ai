@@ -328,9 +328,33 @@ footer {
 
     section {
         padding: 50px 5%;
-    }
+    }    /* Background image for Lost & Maintenance */
 
-    #assistant {
-        margin: 40px 5%;
-    }
+#lost-found,
+#maintenance{
+    position: relative;
+    overflow: hidden;
+}
+
+#lost-found .section-bg,
+#maintenance .section-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("college.jpg") center center/cover no-repeat;
+    opacity: 0.08;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+#lost-found h2,
+#maintenance h2,
+#lostFoundForm,
+#maintenanceForm,
+#lostMessage,
+#maintMessage{
+    position: relative;
+    z-index: 1;
 }
