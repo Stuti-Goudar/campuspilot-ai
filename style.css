@@ -298,7 +298,7 @@ footer {
 @media(max-width: 768px) {
     nav {
         flex-direction: column;
-        padding: 50px 5%;
+        padding: 15px;
     }
 
     nav ul {
@@ -328,22 +328,25 @@ footer {
 
     section {
         padding: 50px 5%;
-    }    /* Background image for Lost & Maintenance */
+    }
+}
+
+/* Background image for Lost & Maintenance */
 
 #lost-found,
-#maintenance{
+#maintenance {
     position: relative;
     overflow: hidden;
 }
 
 #lost-found .section-bg,
-#maintenance .section-bg{
+#maintenance .section-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("jgi.jpg") center center/cover no-repeat;
+    background: url("jgi.png") center center/cover no-repeat;
     opacity: 0.08;
     filter: blur(2px);
     z-index: 0;
@@ -354,7 +357,7 @@ footer {
 #lostFoundForm,
 #maintenanceForm,
 #lostMessage,
-#maintMessage{
+#maintMessage {
     position: relative;
     z-index: 1;
 }
