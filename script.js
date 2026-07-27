@@ -61,13 +61,13 @@ function answerQuestion() {
     } else if (question.includes("fee")) {
         answer.innerHTML = "💳 <b>Fee Counter</b><br>📍 Administrative Block<br>🕒 Timings: 9:00 AM - 4:00 PM";
     } else if (question.includes("bus")) {
-        answer.innerHTML = "🚌 <b>College Bus Service</b><br>Buses arrive between 7:00 AM and 6:00 AM.";
+        answer.innerHTML = "🚌 <b>College Bus Service</b><br>Buses operate between 7:00 AM to 5:00 PM.";
     } else if (question.includes("admission")) {
         answer.innerHTML = "📝 <b>Admission Office</b><br>📍 Ground Floor - Administrative Block";
     } else if (question.includes("contact") || question.includes("phone")) {
         answer.innerHTML = "☎️ <b>Contact College Office:</b><br>+91 98765 43210";
-    } else if (question.includes("hello") || question.includes("hi")) {
-        answer.innerHTML = "👋 Hello! How can I help you navigate SmartCampus today?";
+    } else if (question.includes("Hello") || question.includes("hi")) {
+        answer.innerHTML = "👋 Hello!How can I help you with Jain Institute of Technology campus today?";
     } else {
         answer.innerHTML =
             "🤖 Sorry! I couldn't find an answer for that.<br><br>" +
@@ -104,7 +104,7 @@ function submitLostFound() {
         return;
     }
 
-    msg.innerHTML = `✅ Thank you, ${name}. Your report for "${item}" has been registered.`;
+    msg.innerHTML = `✅ Report submitted successfully!Thank you, ${name}. Our campus team will review your lost item report.`;
     msg.style.color = "#16a34a";
 
     // Clear form fields
@@ -125,7 +125,7 @@ function submitMaintenance() {
         return;
     }
 
-    msg.innerHTML = `✅ Maintenance report submitted for <b>${location}</b>.`;
+    msg.innerHTML = `✅ Maintenance request submitted successfully for <b>${location}</b>. Our team will review it soon.`;
     msg.style.color = "#16a34a";
 
     // Clear form fields
